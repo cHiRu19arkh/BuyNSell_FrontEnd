@@ -1,11 +1,21 @@
 import Navbar from "@/components/Navbar"
 import fetch from 'node-fetch';
 import { motion } from 'framer-motion';
-
+import BackGImage from '../public/assets/iith.jpeg'
 
 export default function Home({lost,found,sell}) {
+  const backgroundImageStyle = {
+    backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1)), url(${BackGImage.src})`,
+    backgroundSize: 'auto',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    height: '100vh', // Set the height to cover the entire viewport
+    width: '100vw', // Set the width to cover the entire viewport
+    // Add additional styles as needed
+  };
+
   return (
-    <div>
+    <div style={backgroundImageStyle}>
       <Navbar/>
       <div className="lg:mt-12 lg:grid-cols-3 grid-cols-1 grid px-6 lg:gap-6"> 
         <div>
